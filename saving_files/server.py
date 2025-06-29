@@ -9,7 +9,7 @@ def get_file(file_name, host, port):
     with open(file_name, "wb") as file:
       
       while True:
-        data=server_socket.recv(1024)
+        data=client_socket.recv(1024)
         if not data:
           break
         file.write(data)
